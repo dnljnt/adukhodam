@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adu Khodam</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .fade {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
+  <body>
+    <div class="container m-auto w-dvw h-dvh border-4 border-red-500">
+      <div
+        class="border-2 border-yellow-600 flex items-center justify-center h-full"
+      >
+        <div class="md:max-w-md p-4 rounded-md bg-blue-200 space-y-4 shadow-md">
+          <div class="space-y-1 text-center">
+            <h1 class="text-2xl font-bold">Adu Khodammu</h1>
+            <p class="text-sm">
+              Setelah kamu memiliki khodam, saat nya untuk diadu untuk
+              mengetahui siapa yang kuat!
+            </p>
+          </div>
+          <div>
+            <form action="#" class="space-y-4" id="form">
+              <div class="space-y-3">
+                <!-- Khodam 1 -->
+                <div class="relative">
+                  <label for="khodam1" class="sr-only"> Email </label>
+                  <input
+                    type="text"
+                    id="khodam1"
+                    placeholder="Masukkan khodammu..."
+                    class="w-full rounded-md border-gray-200 p-3 sm:p-4 shadow-sm sm:text-sm"
+                  />
+                  <span
+                    class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-500"
+                  >
+                    <i class="ri-sword-line"></i>
+                  </span>
+                </div>
+                <!-- Khodam 1 -->
+                <div class="text-center">
+                  <span class="font-bold text-xl italic">VS</span>
+                </div>
+                <!-- Khodam 2 -->
+                <div class="relative">
+                  <label for="khodam2" class="sr-only"> Email </label>
+                  <input
+                    type="text"
+                    id="khodam2"
+                    placeholder="Masukkan khodammu..."
+                    class="w-full rounded-md border-gray-200 p-3 sm:p-4 shadow-sm sm:text-sm"
+                  />
+                  <span
+                    class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-500"
+                  >
+                    <i class="ri-sword-line"></i>
+                  </span>
+                </div>
+                <!-- Khodam 2 -->
+              </div>
+              <div class="flex justify-center">
+                <button
+                  class="group relative inline-flex items-center overflow-hidden rounded bg-indigo-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                  id="btn"
+                >
+                  <span
+                    class="absolute -end-full transition-all group-hover:end-4"
+                  >
+                    <i class="ri-sword-fill"></i>
+                  </span>
+
+                  <span
+                    class="text-sm font-medium transition-all group-hover:me-4"
+                  >
+                    Adu Khodam
+                  </span>
+                </button>
+              </div>
+            </form>
+            <div class="space-y-3 flex flex-col justify-center items-center">
+              <div id="output" style="display: none">
+                <div class="inline-flex flex-col justify-center items-center">
+                  <i class="ri-sword-fill text-6xl animate-pulse"></i>
+                  <p>Memulai pertarungan ...</p>
+                </div>
+              </div>
+              <div id="messageWin"></div>
+              <button
+                class="group relative inline-flex items-center overflow-hidden rounded bg-indigo-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                id="retryBtn"
+              >
+                <span
+                  class="absolute -end-full transition-all group-hover:end-4"
+                >
+                  <i class="ri-loop-left-fill"></i>
+                </span>
+
+                <span
+                  class="text-sm font-medium transition-all group-hover:me-4"
+                >
+                  Coba lagi
+                </span>
+              </button>
+              <p class="text-center font-semibold text-sm" id="txt">Hanya untuk bersenang-senang ✌️</p>
+            </div>
+          </div>
+        </div>
+        <footer class="absolute bottom-2">
+          <div>
+            <p>Dibuat oleh <a href="https://www.github.com/dnljnt">Dann</a></p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/second.js"></script>
+  </body>
+</html>
