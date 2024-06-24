@@ -20,14 +20,39 @@
     }
   </style>
   <body>
-    <div class="container m-auto w-dvw h-dvh border-4">
+    <div class="container m-auto w-dvw h-dvh relative">
+      <!-- Alert -->
       <div
-        class="flex items-center justify-center h-full"
+        id="alert"
+        role="alert"
+        class="transition-all absolute right-0 rounded border-s-4 border-red-500 bg-red-50 p-4"
       >
-        <div class="md:max-w-md p-4 rounded-md bg-blue-200 space-y-4 shadow-md">
+        <div class="flex items-center gap-2 text-red-800">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <strong class="block font-medium">Upss kesalahan input!</strong>
+        </div>
+
+        <p class="mt-2 text-sm text-red-700">Mohon isi input dengan khodammu!</p>
+      </div>
+      <div class="flex items-center justify-center h-full">
+        <div
+          class="max-w-sm md:max-w-md p-6 rounded-md bg-indigo-50 space-y-4 shadow-lg"
+        >
           <div class="space-y-1 text-center">
-            <h1 class="text-2xl font-bold">Adu Khodammu</h1>
-            <p class="text-sm">
+            <h1 class="text-3xl font-bold">Adu Khodammu</h1>
+            <p class="text-xs sm:text-sm">
               Setelah kamu memiliki khodam, saat nya untuk diadu untuk
               mengetahui siapa yang kuat!
             </p>
@@ -42,7 +67,9 @@
                     type="text"
                     id="khodam1"
                     placeholder="Masukkan khodammu..."
-                    class="w-full rounded-md border-gray-200 p-3 sm:p-4 shadow-sm sm:text-sm"
+                    required
+                    name="khodam1"
+                    class="w-full rounded-md border-gray-200 pe-3 sm:p-4 shadow-sm sm:text-sm focus:border-indigo-500 focus:ring-indigo-500 transition-colors"
                   />
                   <span
                     class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-500"
@@ -52,7 +79,7 @@
                 </div>
                 <!-- Khodam 1 -->
                 <div class="text-center">
-                  <span class="font-bold text-xl italic">VS</span>
+                  <span class="font-bold text-2xl italic">VS</span>
                 </div>
                 <!-- Khodam 2 -->
                 <div class="relative">
@@ -61,7 +88,9 @@
                     type="text"
                     id="khodam2"
                     placeholder="Masukkan khodammu..."
-                    class="w-full rounded-md border-gray-200 p-3 sm:p-4 shadow-sm sm:text-sm"
+                    required
+                    name="khodam2"
+                    class="w-full rounded-md border-gray-200 pe-3 sm:p-4 shadow-sm sm:text-sm focus:border-indigo-500 focus:ring-indigo-500 transition-colors"
                   />
                   <span
                     class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-500"
@@ -75,6 +104,7 @@
                 <button
                   class="group relative inline-flex items-center overflow-hidden rounded bg-indigo-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
                   id="btn"
+                  type="button"
                 >
                   <span
                     class="absolute -end-full transition-all group-hover:end-4"
@@ -89,6 +119,7 @@
                 </button>
               </div>
             </form>
+            <!-- OUTPUT -->
             <div class="space-y-3 flex flex-col justify-center items-center">
               <div id="output" style="display: none">
                 <div class="inline-flex flex-col justify-center items-center">
@@ -113,13 +144,16 @@
                   Coba lagi
                 </span>
               </button>
-              <p class="text-center font-semibold text-sm" id="txt">Hanya untuk bersenang-senang ✌️</p>
+              <p class="text-center font-medium text-xs italic" id="txt">
+                Hanya untuk bersenang-senang ✌️
+              </p>
             </div>
           </div>
         </div>
+
         <footer class="absolute bottom-2">
           <div>
-            <p>Dibuat oleh <a href="https://www.github.com/dnljnt">Dann</a></p>
+            <p>Dibuat oleh <a href="https://www.github.com/dnljnt" class="font-bold text-indigo-600">DanXY</a></p>
           </div>
         </footer>
       </div>
